@@ -1,0 +1,81 @@
+{
+  "api": {
+    "api06d3d03c": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "nextamplified475da1fe"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "nextamplified": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "FACEBOOK",
+          "GOOGLE"
+        ],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
+  "function": {
+    "nextamplified475da1fe": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_nextamplified475da1fe_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplified475da1fe"
+        }
+      ]
+    },
+    "AMPLIFY_function_nextamplified475da1fe_dev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplified475da1fe"
+        }
+      ]
+    },
+    "AMPLIFY_function_nextamplified475da1fe_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplified475da1fe"
+        }
+      ]
+    }
+  }
+}
